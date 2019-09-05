@@ -1,0 +1,101 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+App	App.js	/^export default function App(props) {$/;"	f
+Async	App.js	/^        startAsync={loadResourcesAsync}$/;"	c
+BarIcon	navigation/MainTabNavigator.js	/^  tabBarIcon: ({ focused }) => ($/;"	c
+BarInfoContainer	screens/HomeScreen.js	/^  tabBarInfoContainer: {$/;"	c
+BarInfoText	screens/HomeScreen.js	/^  tabBarInfoText: {$/;"	c
+Container	screens/HomeScreen.js	/^  contentContainer: {$/;"	c
+Container	screens/HomeScreen.js	/^  helpContainer: {$/;"	c
+Container	screens/HomeScreen.js	/^  welcomeContainer: {$/;"	c
+ContainerStyle	screens/HomeScreen.js	/^        contentContainerStyle={styles.contentContainer}>$/;"	c
+DevelopmentModeNotice	screens/HomeScreen.js	/^function DevelopmentModeNotice() {$/;"	f
+Duration	screens/LinksScreen.js	/^                fadeDuration={0}$/;"	c
+Error	App.js	/^        onError={handleLoadingError}$/;"	c
+Filename	screens/HomeScreen.js	/^  navigationFilename: {$/;"	c
+Finish	App.js	/^        onFinish={() => handleFinishLoading(setLoadingComplete)}$/;"	c
+FoodView	screens/LinksScreen.js	/^class FoodView extends React.Component {$/;"	c
+HighlightContainer	screens/HomeScreen.js	/^  codeHighlightContainer: {$/;"	c
+HighlightText	screens/HomeScreen.js	/^  codeHighlightText: {$/;"	c
+HomeScreen	screens/HomeScreen.js	/^export default function HomeScreen() {$/;"	f
+HomeStack	navigation/MainTabNavigator.js	/^const HomeStack = createStackNavigator($/;"	c
+IconContainer	screens/LinksScreen.js	/^  optionIconContainer: {$/;"	c
+Image	screens/HomeScreen.js	/^  welcomeImage: {$/;"	c
+Link	screens/HomeScreen.js	/^  helpLink: {$/;"	c
+LinkText	screens/HomeScreen.js	/^  helpLinkText: {$/;"	c
+LinksScreen	screens/LinksScreen.js	/^export default function LinksScreen() {$/;"	f
+LinksStack	navigation/MainTabNavigator.js	/^const LinksStack = createStackNavigator($/;"	c
+ModeText	screens/HomeScreen.js	/^  developmentModeText: {$/;"	c
+MonoText	components/StyledText.js	/^export function MonoText(props) {$/;"	f
+MoreButton	screens/HomeScreen.js	/^    const learnMoreButton = ($/;"	c
+Navigator	navigation/AppNavigator.web.js	/^const switchNavigator = createSwitchNavigator({$/;"	c
+Navigator	navigation/MainTabNavigator.js	/^const tabNavigator = createBottomTabNavigator({$/;"	c
+Offset	screens/HomeScreen.js	/^        shadowOffset: { width: 0, height: -3 },$/;"	c
+Options	navigation/MainTabNavigator.js	/^HomeStack.navigationOptions = {$/;"	c
+Options	navigation/MainTabNavigator.js	/^LinksStack.navigationOptions = {$/;"	c
+Options	screens/HomeScreen.js	/^HomeScreen.navigationOptions = {$/;"	c
+Options	screens/LinksScreen.js	/^LinksScreen.navigationOptions = {$/;"	c
+Options	screens/SettingsScreen.js	/^SettingsScreen.navigationOptions = {$/;"	c
+Press	screens/HomeScreen.js	/^          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>$/;"	c
+Press	screens/HomeScreen.js	/^      <Text onPress={handleLearnMorePress} style={styles.helpLinkText}>$/;"	c
+Press	screens/LinksScreen.js	/^          onPress={ () => { WebBrowser.openBrowserAsync('https:\/\/nutritiondata.self.com\/facts\/finfish-and-shellfish-products\/4030\/2') } }>$/;"	c
+Press	screens/LinksScreen.js	/^          onPress={ () => { WebBrowser.openBrowserAsync('https:\/\/nutritiondata.self.com\/facts\/fruits-and-fruit-juices\/1843\/2') } }>$/;"	c
+Press	screens/LinksScreen.js	/^          onPress={ () => { WebBrowser.openBrowserAsync('https:\/\/nutritiondata.self.com\/facts\/fruits-and-fruit-juices\/1846\/2') } }>$/;"	c
+PressDocs	screens/LinksScreen.js	/^  _handlePressDocs = () => { };$/;"	c
+PressForums	screens/LinksScreen.js	/^  _handlePressForums = () => {$/;"	c
+PressSlack	screens/LinksScreen.js	/^  _handlePressSlack = () => { };$/;"	c
+ScreenFilename	screens/HomeScreen.js	/^  homeScreenFilename: {$/;"	c
+SettingsScreen	screens/SettingsScreen.js	/^export default function SettingsScreen() {$/;"	f
+StartedContainer	screens/HomeScreen.js	/^  getStartedContainer: {$/;"	c
+StartedText	screens/HomeScreen.js	/^  getStartedText: {$/;"	c
+TabBarIcon	components/TabBarIcon.js	/^export default function TabBarIcon(props) {$/;"	f
+Text	screens/LinksScreen.js	/^  optionText: {$/;"	c
+TitleText	screens/LinksScreen.js	/^  optionsTitleText: {$/;"	c
+android	screens/HomeScreen.js	/^      android: {$/;"	o
+codeHighlightContainer	screens/HomeScreen.js	/^  codeHighlightContainer: {$/;"	o
+codeHighlightText	screens/HomeScreen.js	/^  codeHighlightText: {$/;"	o
+container	App.js	/^  container: {$/;"	o
+container	screens/HomeScreen.js	/^  container: {$/;"	o
+container	screens/LinksScreen.js	/^  container: {$/;"	o
+contentContainer	screens/HomeScreen.js	/^  contentContainer: {$/;"	o
+default	navigation/MainTabNavigator.js	/^  default: {},$/;"	o
+developmentModeText	screens/HomeScreen.js	/^  developmentModeText: {$/;"	o
+exports	babel.config.js	/^module.exports = function(api) {$/;"	f
+function	babel.config.js	/^module.exports = function(api) {$/;"	f
+getStartedContainer	screens/HomeScreen.js	/^  getStartedContainer: {$/;"	o
+getStartedText	screens/HomeScreen.js	/^  getStartedText: {$/;"	o
+handleFinishLoading	App.js	/^function handleFinishLoading(setLoadingComplete) {$/;"	f
+handleHelpPress	screens/HomeScreen.js	/^function handleHelpPress() {$/;"	f
+handleLearnMorePress	screens/HomeScreen.js	/^function handleLearnMorePress() {$/;"	f
+handleLoadingError	App.js	/^function handleLoadingError(error) {$/;"	f
+helpContainer	screens/HomeScreen.js	/^  helpContainer: {$/;"	o
+helpLink	screens/HomeScreen.js	/^  helpLink: {$/;"	o
+helpLinkText	screens/HomeScreen.js	/^  helpLinkText: {$/;"	o
+homeScreenFilename	screens/HomeScreen.js	/^  homeScreenFilename: {$/;"	o
+if	App.js	/^  if (!isLoadingComplete && !props.skipLoadingScreen) {$/;"	f
+if	components/TabBarIcon.js	/^  if (props.name == 'food') {$/;"	f
+if	screens/HomeScreen.js	/^  if (__DEV__) {$/;"	f
+ios	screens/HomeScreen.js	/^      ios: {$/;"	o
+loadResourcesAsync	App.js	/^async function loadResourcesAsync() {$/;"	f
+navigationFilename	screens/HomeScreen.js	/^  navigationFilename: {$/;"	o
+navigationOptions	navigation/MainTabNavigator.js	/^HomeStack.navigationOptions = {$/;"	o
+navigationOptions	navigation/MainTabNavigator.js	/^LinksStack.navigationOptions = {$/;"	o
+navigationOptions	screens/HomeScreen.js	/^HomeScreen.navigationOptions = {$/;"	o
+navigationOptions	screens/LinksScreen.js	/^LinksScreen.navigationOptions = {$/;"	o
+navigationOptions	screens/SettingsScreen.js	/^SettingsScreen.navigationOptions = {$/;"	o
+option	screens/LinksScreen.js	/^  option: {$/;"	o
+optionIconContainer	screens/LinksScreen.js	/^  optionIconContainer: {$/;"	o
+optionText	screens/LinksScreen.js	/^  optionText: {$/;"	o
+optionsTitleText	screens/LinksScreen.js	/^  optionsTitleText: {$/;"	o
+render	screens/LinksScreen.js	/^  render() {$/;"	f
+shadowOffset	screens/HomeScreen.js	/^        shadowOffset: { width: 0, height: -3 },$/;"	o
+tabBarInfoContainer	screens/HomeScreen.js	/^  tabBarInfoContainer: {$/;"	o
+tabBarInfoText	screens/HomeScreen.js	/^  tabBarInfoText: {$/;"	o
+web	navigation/MainTabNavigator.js	/^  web: { headerMode: 'screen' },$/;"	o
+welcomeContainer	screens/HomeScreen.js	/^  welcomeContainer: {$/;"	o
+welcomeImage	screens/HomeScreen.js	/^  welcomeImage: {$/;"	o
+window	constants/Layout.js	/^  window: {$/;"	o
