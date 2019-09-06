@@ -1,132 +1,56 @@
 import React from 'react';
 import { ExpoLinksView } from '@expo/samples';
 import { FlatList, ScrollView, StyleSheet, Image, Text, View } from 'react-native';
-import * as WebBrowser from 'expo-web-browser';
 import { Ionicons } from '@expo/vector-icons';
 import Touchable from 'react-native-platform-touchable';
+import Food from '../objects/Food';
 
 
-export default LinksScreen = () => {
+export default LinksScreen = ({ navigation }) => {
 
 	_renderItem = ({item}) => {
 		return (
 			<Touchable
 				style={styles.option}
 				background={Touchable.Ripple('#ccc', false)}
-				onPress={ () => { WebBrowser.openBrowserAsync('https://nutritiondata.self.com/facts/fruits-and-fruit-juices/1843/2') } }>
+				onPress={() => navigation.push('FoodDetail', { food: item })}
+			>
 				<View style={{ flexDirection: 'row' }}>
 					<View style={styles.optionIconContainer}>
 						<Image
-							source={require('../assets/food_icons/MC-foodie-icons-latin-color-fill-02.png')}
+							source={item.icon}
 							resizeMode="contain"
 							fadeDuration={0}
 							style={{ width: 20, height: 20, marginTop: 1 }}
 						/>
 					</View>
 					<View style={styles.optionTextContainer}>
-						<Text style={styles.optionText}>{item.food}</Text>
+						<Text style={styles.optionText}>{item.name}</Text>
 					</View>
-					<View>
-						<Text style={styles.optionText}>{item.iodine}</Text>
+					<View style={{flexGrow: 1}}>
+						<Text style={styles.optionText, {textAlign: 'right', paddingRight: 20 }}>{'    '}{item.iodine}</Text>
 					</View>
 				</View>
 			</Touchable>
 		)
 	}
 
+	headerComponent = (
+		<View style={styles.header}>
+			<Text style={{fontSize: 20}}>Food</Text>
+			<Text style={{fontSize: 20, flexGrow: 1, textAlign: 'right', paddingRight: 15 }}>Iodine</Text>
+		</View>
+	);
 	return (
 		<FlatList
-			data={[{'food':'fish', 'iodine':'100'}, {'food':'avocado'}]}
-			keyExtractor={(item, index) => item.food}
+			ListHeaderComponent={headerComponent}
+			data={Food.getAllFoods()}
+			keyExtractor={(item, index) => item.name}
 			renderItem={_renderItem}
 		>
 		</FlatList>
-		//<ScrollView style={styles.container}>
-		//	<FoodView />
-		//</ScrollView>
 	);
 
-}
-
-class FoodView extends React.Component {
-	render() {
-		return (
-			<View>
-				<Text style={styles.optionsTitleText}>
-					Resources
-				</Text>
-
-				<Touchable
-					style={styles.option}
-					background={Touchable.Ripple('#ccc', false)}
-					onPress={ () => { WebBrowser.openBrowserAsync('https://nutritiondata.self.com/facts/fruits-and-fruit-juices/1843/2') } }>
-					<View style={{ flexDirection: 'row' }}>
-						<View style={styles.optionIconContainer}>
-							<Image
-								source={require('../assets/food_icons/MC-foodie-icons-latin-color-fill-02.png')}
-								resizeMode="contain"
-								fadeDuration={0}
-								style={{ width: 20, height: 20, marginTop: 1 }}
-							/>
-						</View>
-						<View style={styles.optionTextContainer}>
-							<Text style={styles.optionText}>
-								Avocado
-							</Text>
-						</View>
-					</View>
-				</Touchable>
-
-				<Touchable
-					background={Touchable.Ripple('#ccc', false)}
-					style={styles.option}
-					onPress={ () => { WebBrowser.openBrowserAsync('https://nutritiondata.self.com/facts/fruits-and-fruit-juices/1846/2') } }>
-					<View style={{ flexDirection: 'row' }}>
-						<View style={styles.optionIconContainer}>
-							<Image
-								source={require('../assets/food_icons/MC-foodie-icons-latin-color-fill-16.png')}
-								fadeDuration={0}
-								style={{ width: 20, height: 20 }}
-							/>
-						</View>
-						<View style={styles.optionTextContainer}>
-							<Text style={styles.optionText}>
-								Banana
-							</Text>
-						</View>
-					</View>
-				</Touchable>
-
-				<Touchable
-					style={styles.option}
-					background={Touchable.Ripple('#ccc', false)}
-					onPress={ () => { WebBrowser.openBrowserAsync('https://nutritiondata.self.com/facts/finfish-and-shellfish-products/4030/2') } }>
-					<View style={{ flexDirection: 'row' }}>
-						<View style={styles.optionIconContainer}>
-							<Image
-								source={require('../assets/food_icons/MC-foodie-icons-latin-color-fill-15.png')}
-								fadeDuration={0}
-								style={{ width: 20, height: 20 }}
-							/>
-						</View>
-						<View style={styles.optionTextContainer}>
-							<Text style={styles.optionText}>
-								Fish
-							</Text>
-						</View>
-					</View>
-				</Touchable>
-			</View>
-		);
-	}
-
-	_handlePressSlack = () => { };
-
-	_handlePressDocs = () => { };
-
-	_handlePressForums = () => {
-		
-	};
 }
 
 LinksScreen.navigationOptions = {
@@ -138,6 +62,14 @@ const styles = StyleSheet.create({
 		flex: 1,
 		paddingTop: 15,
 		backgroundColor: '#fff',
+	},
+	header: {
+		backgroundColor: '#fdfdfd',
+		paddingHorizontal: 15,
+		paddingVertical: 15,
+		borderBottomWidth: 2,
+		borderBottomColor: '#EDEDED',
+		flexDirection: 'row',
 	},
 	optionsTitleText: {
 		fontSize: 16,
