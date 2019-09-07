@@ -9,6 +9,14 @@ import Food from '../objects/Food';
 export default LinksScreen = ({ navigation }) => {
 
 	_renderItem = ({item}) => {
+
+		// Make the string the right size regardless of digits
+		let iodine_dv_string = Number((item.iodine / 200).toFixed(2)).toString() + "%"
+		while (iodine_dv_string.length < 5){
+			iodine_dv_string += " ";
+		}
+
+		// Return the actual render
 		return (
 			<Touchable
 				style={styles.option}
@@ -28,7 +36,10 @@ export default LinksScreen = ({ navigation }) => {
 						<Text style={styles.optionText}>{item.name}</Text>
 					</View>
 					<View style={{flexGrow: 1}}>
-						<Text style={styles.optionText, {textAlign: 'right', paddingRight: 20 }}>{'    '}{item.iodine}</Text>
+						<Text style={styles.optionText, {textAlign: 'right', paddingRight: 10 }}>{item.iodine} mcg</Text>
+					</View>
+					<View>
+						<Text style={styles.optionText, {textAlign: 'right', paddingRight: 10 }}>{iodine_dv_string} DV</Text>
 					</View>
 				</View>
 			</Touchable>
@@ -38,9 +49,10 @@ export default LinksScreen = ({ navigation }) => {
 	headerComponent = (
 		<View style={styles.header}>
 			<Text style={{fontSize: 20}}>Food</Text>
-			<Text style={{fontSize: 20, flexGrow: 1, textAlign: 'right', paddingRight: 15 }}>Iodine</Text>
+			<Text style={{fontSize: 20, flexGrow: 1, textAlign: 'right' }}>Iodine</Text>
 		</View>
 	);
+
 	return (
 		<FlatList
 			ListHeaderComponent={headerComponent}
@@ -54,7 +66,7 @@ export default LinksScreen = ({ navigation }) => {
 }
 
 LinksScreen.navigationOptions = {
-	title: 'Foods',
+	title: 'Food Information',
 };
 
 const styles = StyleSheet.create({
@@ -65,10 +77,8 @@ const styles = StyleSheet.create({
 	},
 	header: {
 		backgroundColor: '#fdfdfd',
-		paddingHorizontal: 15,
-		paddingVertical: 15,
-		borderBottomWidth: 2,
-		borderBottomColor: '#EDEDED',
+		paddingTop: 15,
+		paddingHorizontal: 30,
 		flexDirection: 'row',
 	},
 	optionsTitleText: {
